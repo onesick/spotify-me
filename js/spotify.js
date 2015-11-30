@@ -25,8 +25,8 @@ function searchByArtist(keyword) {
     type: "get",
     dataType: "json"
   }).done(function(response){
-    $("#results").append("<li><a href="+response.artists.href+"> "+response.artists.name+ "</li>");
-    console.log("ajax loaded");
+    $("#results").append("<li><a href="+response.artists.href+"> "+response.artists.name+ "</a></li>");
+    console.log(response.artists.name);
   }).fail(function(){
     console.log("ajax load failed");
   })
